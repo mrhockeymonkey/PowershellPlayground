@@ -28,7 +28,7 @@ $RunspacePool.Open()
    }
  
    #Create Powershell Instance for your job
-   $PowerShell = [Powershell]::Create()
+   $PowerShell = [System.Management.Automation.PowerShell]::Create()
    $PowerShell.RunspacePool = $RunspacePool
    [Void]$PowerShell.AddScript($Script).AddParameters($Params)
  
